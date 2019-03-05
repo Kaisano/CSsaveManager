@@ -13,6 +13,10 @@ import javax.swing.JComboBox;
 import java.awt.FlowLayout;
 import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class driver extends JFrame {
 
@@ -51,8 +55,15 @@ public class driver extends JFrame {
 		panel.setLayout(null);
 		
 		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(50, 121, 341, 20);
+		comboBox.setBounds(50, 112, 341, 20);
 		panel.add(comboBox);
 		
+		JButton btnNewButton = new JButton("Set as Save Point");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnNewButton.setBounds(176, 192, 89, 23);
+		panel.add(btnNewButton);
 	}
 }
