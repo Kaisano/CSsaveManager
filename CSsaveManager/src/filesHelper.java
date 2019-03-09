@@ -14,6 +14,8 @@ public class filesHelper extends JPanel {
 		JOptionPane.showMessageDialog(null, "Select Saves directory", "Select Directory", JOptionPane.PLAIN_MESSAGE);
 		File folder = showFileViewer();
 		System.out.println(folder.getPath());
+		File settings = new File(folder.getPath() + "\\settings.ini");
+		
 	}
 	public static void main(String[] args)
 	{
@@ -40,7 +42,9 @@ public class filesHelper extends JPanel {
 		}
 		else {
 			System.out.println("No Selection ");
+			System.exit(0);
 		}
 		return null;
 	}
+	
 }
